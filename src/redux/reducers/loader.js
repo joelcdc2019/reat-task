@@ -1,6 +1,6 @@
 import actionTypes from '../actionTypes';
 
-const INITIAL_STATE = false
+const INITIAL_STATE = true
 
 export default (state = INITIAL_STATE, action) => {
   switch (action.type) {
