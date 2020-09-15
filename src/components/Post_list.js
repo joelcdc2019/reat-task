@@ -1,8 +1,10 @@
 import React from "react";
 import { Table } from "reactstrap";
+import ReactImageAppear from 'react-image-appear';
 import Moment from 'moment';
 import SanitizedHTML from 'react-sanitized-html';
 const regEx = /(@[^\s]+)/gim
+var urlRegex = new RegExp("^(http|https)://", "i");
 
 const Posts = (props) => {
   const { users, posts, properties } = props;
@@ -11,7 +13,7 @@ const Posts = (props) => {
     if (user.length)
       return { name: user[0].name, profile_pic: user[0].profile_picture };
 
-    return { name: "Unknown", profile_pic: null };
+    return { name: "Unknown", profile_pic: "" };
   };
   const getProperty = (propery_id) => {
     let propery = properties.filter((propery) => propery.id === propery_id);
@@ -47,15 +49,16 @@ const Posts = (props) => {
           {posts.map((item, index) => {
             return (
               <tr key={index}>
-                <th scope="row">{index}</th>
+                <th scope="row">{index+1}</th>
                 <td>{getProperty(item.property_id)}</td>
                 <td>
                   <div className="d-flex flex-column">
                     <span>{getUser(item.user_id)["name"]}</span>
-                    <div className="border d-flex flex-row justify-content-center p-2">
-                      <img
-                        src={getUser(item.user_id)["profile_pic"]}
-                      />
+                    <div className="border d-flex flex-row justify-content-center p-2 h-100">
+                        {urlRegex.test(getUser(item.user_id)["profile_pic"])?<ReactImageAppear 
+                            src={getUser(item.user_id)["profile_pic"]}
+                            loader="https://cache.dominos.com/nolo/ca/en/010048/assets/build/images/img/spinner.gif"
+                        />:''}
                     </div>
                   </div>
                 </td>
@@ -75,9 +78,11 @@ const Posts = (props) => {
                     <div className={
                         item.post_media!=="null"?'d-flex flex-row justify-content-center'
                         :'border d-flex flex-row justify-content-center h-80'}>
-                      {item.post_media!=="null"?<img
+                      {item.post_media!=="null"?
+                      <ReactImageAppear 
                         src={item.post_media}
-                      />:''}
+                        loader="https://cache.dominos.com/nolo/ca/en/010048/assets/build/images/img/spinner.gif"
+                       />:''}
                     </div>
                 </td>
                 <td className="post_content">
