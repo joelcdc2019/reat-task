@@ -1,0 +1,92 @@
+@font-face {
+  font-family: 'Socicon';
+  src:  url('../fonts/Socicon.eot?87visu');
+  src:  url('../fonts/Socicon.eot?87visu#iefix') format('embedded-opentype'),
+    url('../fonts/Socicon.woff2?87visu') format('woff2'),
+    url('../fonts/Socicon.ttf?87visu') format('truetype'),
+    url('../fonts/Socicon.woff?87visu') format('woff'),
+    url('../fonts/Socicon.svg?87visu#Socicon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="socicon-"], [class*=" socicon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'Socicon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon:before {
+  border-radius: 50%;
+  font-size: 20px;
+  padding: 10px;
+  color: #353535;
+}
+[class*="facebook"]:before {
+  content: "\e028";
+  background: #3b5998;
+  border-color: #3b5998;
+}
+[class*="twitter"]:before {
+  content: "\e08d";
+  background: #00aced;
+  border-color: #00aced;
+}
+[class*="youtube"]:before {
+  content: "\e0a5";
+  background: #bb0000;
+  border-color: #bb0000;
+}
+[class*="tumblr"]:before {
+  content: "\e08b";
+  background: #32506d;
+  border-color: #32506d;
+}
+[class*="vine"]:before {
+  content: "\e094";
+  background: #00bf8f;
+  border-color: #00bf8f;
+}
+[class*="flickr"]:before {
+  content: "\e02d";
+  background: #3b5998;
+  border-color: #3b5998;
+}
+[class*="vimeo"]:before {
+  content: "\e093";
+  background: #3b5998;
+  border-color: #3b5998;
+}
+[class*="pinterest"]:before {
+  content: "\e063";
+  background: #cb2027;
+  border-color: #cb2027;
+}
+[class*="linkedin"]:before {
+  content: "\e04c";
+  background: #007bb6;
+  border-color: #007bb6;
+}
+[class*="instagram"]:before {
+  content: "\e044";
+  background: #517fa4;
+  border-color: #517fa4;
+}
+[class*="spotify"]:before {
+  content: "\e079";
+  background: #1ed760;
+  border-color: #1ed760;
+}
+[class*="default"]:before {
+  content: "\e971";
+  background: #3b5998;
+  border-color: #3b5998;
+}

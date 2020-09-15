@@ -1,0 +1,26 @@
+table.posts_table {
+    td {
+        text-align: center; 
+        vertical-align: middle;
+        img {
+            height: 80px;
+            width: 80px;
+        }
+        &.post_content {
+            p {
+                display: inline!important;
+                margin: 0!important;
+                b{
+                font-weight: 800;
+                background-color: #898989;
+                }
+            }
+        }
+    }
+    .h-80 {
+        height: 80px;
+    }
+    .border {
+       border:1px solid #dee2e661!important
+    }
+}
